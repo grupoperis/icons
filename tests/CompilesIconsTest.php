@@ -9,7 +9,8 @@ use Orchestra\Testbench\TestCase;
 class CompilesIconsTest extends TestCase
 {
     /** @test */
-    public function it_compiles_a_single_anonymous_component() {
+    public function it_compiles_a_single_anonymous_component()
+    {
         $result = svg('icon-bell')->toHtml();
 
         // Note: the empty class here seems to be a Blade components bug.
@@ -23,7 +24,8 @@ class CompilesIconsTest extends TestCase
     }
 
     /** @test */
-    public function it_can_add_classes_to_icons() {
+    public function it_can_add_classes_to_icons()
+    {
         $result = svg('icon-bell', 'w-6 h-6 text-gray-500')->toHtml();
 
         $expected = <<<'SVG'
@@ -36,7 +38,8 @@ class CompilesIconsTest extends TestCase
     }
 
     /** @test */
-    public function it_can_add_styles_to_icons() {
+    public function it_can_add_styles_to_icons()
+    {
         $result = svg('icon-bell', ['style' => 'color: #555'])->toHtml();
 
         $expected = <<<'SVG'
@@ -54,7 +57,8 @@ class CompilesIconsTest extends TestCase
      * @param  \Illuminate\Foundation\Application  $app
      * @return array<int, class-string>
      */
-    protected function getPackageProviders($app) {
+    protected function getPackageProviders($app)
+    {
         return [
             BladeIconsServiceProvider::class,
             IconsServiceProvider::class,

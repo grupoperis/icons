@@ -13,7 +13,8 @@ class IconsServiceProvider extends ServiceProvider
     /**
      * Bootstrap any application services.
      */
-    public function boot(): void {
+    public function boot(): void
+    {
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 dirname(__DIR__).'/resources/svg' => public_path('vendor/icons'),
@@ -31,7 +32,8 @@ class IconsServiceProvider extends ServiceProvider
      * @throws CannotRegisterIconSet
      * @throws BindingResolutionException
      */
-    public function register(): void {
+    public function register(): void
+    {
         $this->registerConfig();
 
         $this->callAfterResolving(Factory::class, function (Factory $factory, Container $container) {
@@ -44,7 +46,8 @@ class IconsServiceProvider extends ServiceProvider
     /**
      * Register the package config.
      */
-    protected function registerConfig(): void {
+    protected function registerConfig(): void
+    {
         $this->mergeConfigFrom(dirname(__DIR__).'/config/icons.php', 'icons');
     }
 }
