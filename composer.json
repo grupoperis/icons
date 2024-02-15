@@ -3,7 +3,7 @@
     "description": "A custom icon collection for internal usage.",
     "keywords": ["Grupo Peris", "Icons"],
     "homepage": "https://github.com/grupoperis/icons",
-    "license": "Copyright (c) 2023 PERISHOLD S.L.U.",
+    "license": "MIT",
     "authors": [
         {
             "name": "Sergio Peris",
