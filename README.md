@@ -51,9 +51,3 @@ The solid icons can be referenced like this:
 ```blade
 <x-icon-home/>
 ```
-
-## License
-
-This project is under Copyright (c) 2023 PERISHOLD S.L.U.
-
-Any unauthorized copying, distribution, reproduction or modification of this content by any person or entity is strictly prohibited.
